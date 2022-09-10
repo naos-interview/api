@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package tokenAddress;
+
+service AppController {
+  rpc createTokenAddress (CreateTokenAddressRequest) returns (CreateTokenAddressResponse);
+}
+
+
+message CreateTokenAddressRequest {
+  string tokenAddress = 1;
+  // repeated double data = 1; for array
+}
+
+message CreateTokenAddressResponse {
+  double sum = 1;
+}
