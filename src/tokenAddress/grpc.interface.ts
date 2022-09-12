@@ -9,7 +9,7 @@ export interface CreateTokenAddressResponse {
 }
 
 export interface TokenServiceClient {
-  createTokenAddress(
+  createContractAddress(
     request: CreateTokenAddressRequest,
   ): Observable<CreateTokenAddressResponse>;
 }

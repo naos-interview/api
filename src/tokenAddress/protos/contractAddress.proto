@@ -2,8 +2,8 @@ syntax = "proto3";
 
 package contractAddress;
 
-service TokenAdressService {
-  rpc createTokenAddress (CreateTokenAddressRequest) returns (CreateTokenAddressResponse);
+service ContractAddressService {
+  rpc createContractAddress (CreateTokenAddressRequest) returns (CreateTokenAddressResponse);
 }
 
 

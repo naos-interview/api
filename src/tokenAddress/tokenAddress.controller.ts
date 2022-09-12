@@ -19,11 +19,13 @@ export class TokenAddressController implements OnModuleInit {
   private client: ClientGrpc;
 
   onModuleInit(): void {
-    this.svc = this.client.getService<TokenServiceClient>('TokenAdressService');
+    this.svc = this.client.getService<TokenServiceClient>(
+      'ContractAddressService',
+    );
   }
 
   @Post()
   createNewTokenAddress(@Body() body: CreateTokenAddressDTO) {
-    return this.svc.createTokenAddress(body);
+    return this.svc.createContractAddress(body);
   }
 }
