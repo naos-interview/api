@@ -11,7 +11,7 @@ import { TokenAddressController } from './tokenAddress.controller';
         transport: Transport.GRPC,
         options: {
           url: 'localhost:50053',
-          package: 'tokenAddress',
+          package: 'contractAddress',
           protoPath: join(
             __dirname,
             '../../src/tokenAddress/protos/contractAddress.proto',
