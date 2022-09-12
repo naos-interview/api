@@ -7,14 +7,14 @@ import { TokenAddressController } from './tokenAddress.controller';
   imports: [
     ClientsModule.register([
       {
-        name: 'TOKENADDRESS_PACKAGE',
+        name: 'CONTRACTADDRESS_PACKAGE',
         transport: Transport.GRPC,
         options: {
           url: 'localhost:50053',
           package: 'tokenAddress',
           protoPath: join(
             __dirname,
-            '../../src/tokenAddress/protos/tokenAddress.proto',
+            '../../src/tokenAddress/protos/contractAddress.proto',
           ),
         },
       },

@@ -15,7 +15,7 @@ export class TokenAddressController implements OnModuleInit {
   private svc: TokenServiceClient;
   private logger = new Logger('AppController');
 
-  @Inject('TOKENADDRESS_PACKAGE')
+  @Inject('CONTRACTADDRESS_PACKAGE')
   private client: ClientGrpc;
 
   onModuleInit(): void {
