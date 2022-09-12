@@ -26,8 +26,6 @@ export class TokenAddressController implements OnModuleInit {
 
   @Post()
   createNewTokenAddress(@Body() body: CreateContractAddressDTO) {
-    console.log(this.svc.createContractAddress(body));
-    // return 'hello';
-    // return this.svc.createContractAddress(body);
+    return this.svc.createContractAddress(body);
   }
 }
