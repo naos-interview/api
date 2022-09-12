@@ -25,7 +25,7 @@ export class ContractAddressController implements OnModuleInit {
   }
 
   @Post()
-  createContractContractAddress(@Body() body: CreateContractAddressDTO) {
+  createContractAddress(@Body() body: CreateContractAddressDTO) {
     return this.svc.createContractAddress(body);
   }
 }
