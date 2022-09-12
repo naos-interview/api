@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { join } from 'path';
-import { TokenAddressController } from './tokenAddress.controller';
+import { ContractAddressController } from './contractAddress.controller';
 
 @Module({
   imports: [
@@ -14,12 +14,12 @@ import { TokenAddressController } from './tokenAddress.controller';
           package: 'contractAddress',
           protoPath: join(
             __dirname,
-            '../../src/tokenAddress/protos/contractAddress.proto',
+            '../../src/contractAddress/protos/contractAddress.proto',
           ),
         },
       },
     ]),
   ],
-  controllers: [TokenAddressController],
+  controllers: [ContractAddressController],
 })
-export class TokenAddressModule {}
+export class ContractAddressModule {}

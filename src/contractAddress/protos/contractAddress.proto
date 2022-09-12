@@ -1,9 +1,11 @@
+import "google/protobuf/empty.proto";
 syntax = "proto3";
 
 package contractAddress;
 
 service ContractAddressService {
   rpc createContractAddress (CreateTokenAddressRequest) returns (CreateTokenAddressResponse);
+  rpc getAllContractAddress (google.protobuf.Empty) returns (GetAllContractAddressResponse);
 }
 
 
@@ -13,5 +15,9 @@ message CreateTokenAddressRequest {
 }
 
 message CreateTokenAddressResponse {
-  double sum = 1;
+  bool success = 1;
+}
+
+message GetAllContractAddressResponse {
+  repeated string data = 1;
 }
