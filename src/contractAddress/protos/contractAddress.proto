@@ -8,6 +8,10 @@ service ContractAddressService {
   rpc getAllContractAddress (google.protobuf.Empty) returns (GetAllContractAddressResponse);
 }
 
+message Contract {
+  int32 id = 1;
+  string address = 2;
+}
 
 message CreateContractAddressRequest {
   string tokenAddress = 1;
@@ -19,5 +23,5 @@ message CreateContractAddressResponse {
 }
 
 message GetAllContractAddressResponse {
-  repeated string data = 1;
+  repeated Contract data = 1;
 }
