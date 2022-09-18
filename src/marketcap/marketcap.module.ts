@@ -11,7 +11,7 @@ import { MarketcapService } from './marketcap.service';
         name: 'MARKETCAP_PACKAGE',
         transport: Transport.GRPC,
         options: {
-          url: 'localhost:50054',
+          url: 'marketcap-service:50054',
           package: 'marketcap',
           protoPath: join(__dirname, '../../src/protos/marketcap.proto'),
         },
